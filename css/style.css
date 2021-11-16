@@ -110,24 +110,6 @@
   font-family: "vintageItalic";
   font-size: 1.5em;
 }
-.mainIndex .mapa1 {
-  transition: all 1.5s;
-}
-.mainIndex .mapa1:hover {
-  transform: scale(1.1);
-  box-shadow: -28px 24px 27px 0px rgba(0, 0, 0, 0.52);
-  -webkit-box-shadow: -28px 24px 27px 0px rgba(0, 0, 0, 0.52);
-  -moz-box-shadow: -28px 24px 27px 0px rgba(0, 0, 0, 0.52);
-}
-.mainIndex .mapa2 {
-  transition: all 1.5s;
-}
-.mainIndex .mapa2:hover {
-  transform: scale(1.1);
-  box-shadow: 28px 24px 27px 0px rgba(0, 0, 0, 0.52);
-  -webkit-box-shadow: 28px 24px 27px 0px rgba(0, 0, 0, 0.52);
-  -moz-box-shadow: 28px 24px 27px 0px rgba(0, 0, 0, 0.52);
-}
 .mainIndex h4 {
   font-size: 3em;
 }
@@ -150,6 +132,19 @@ main .contactoDatos {
   grid-template-columns: 50%;
   grid-template-rows: 90px 500px;
   gap: 1em;
+}
+main .contactoDatos .mapa {
+  display: flex;
+  justify-content: center;
+}
+main .contactoDatos .mapa .mapa2 {
+  transition: all 1.5s;
+}
+main .contactoDatos .mapa .mapa2:hover {
+  transform: scale(1.1);
+  box-shadow: 28px 24px 27px 0px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 28px 24px 27px 0px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 28px 24px 27px 0px rgba(0, 0, 0, 0.52);
 }
 main .contactoDatos .telefonos {
   font-family: "Noto Sans Mono", monospace;

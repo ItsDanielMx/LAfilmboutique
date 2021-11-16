@@ -1,3 +1,10 @@
+@mixin mapas($transform,$box-shadow,$-webkit-box-shadow,$-moz-box-shadow) {
+    transform: $transform;
+    box-shadow: $box-shadow;
+    -webkit-box-shadow: $-webkit-box-shadow;
+    -moz-box-shadow: $-moz-box-shadow;
+}
+
 main {
 
     .talk {
@@ -17,7 +24,17 @@ main {
         grid-template-columns: 50%;
         grid-template-rows: 90px 500px;
         gap: 1em;
-
+            .mapa{
+                display: flex;
+                justify-content: center;
+                .mapa2 {
+                    transition: all 1.5s;
+                    
+                    &:hover {
+                        @include mapas(scale(1.1), 28px 24px 27px 0px rgba(0,0,0,0.52), 28px 24px 27px 0px rgba(0,0,0,0.52), 28px 24px 27px 0px rgba(0,0,0,0.52));
+                    }
+                }
+            }
         .telefonos {
             font-family: 'Noto Sans Mono', monospace;
             font-size: 1em;
@@ -30,6 +47,8 @@ main {
                 transform: scale(1.5);
                 background-color:  rgb(255, 255, 255);
             }
+
+            
         }
     }
 } 

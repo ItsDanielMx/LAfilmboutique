@@ -1,10 +1,3 @@
-@mixin mapas($transform,$box-shadow,$-webkit-box-shadow,$-moz-box-shadow) {
-    transform: $transform;
-    box-shadow: $box-shadow;
-    -webkit-box-shadow: $-webkit-box-shadow;
-    -moz-box-shadow: $-moz-box-shadow;
-}
-
 .mainIndex {
     text-align: center;
     
@@ -18,20 +11,6 @@
         font-size: 1.5em;
     }
     
-    .mapa1 {
-        transition: all 1.5s;
-
-        &:hover {
-            @include mapas(scale(1.1), -28px 24px 27px 0px rgba(0,0,0,0.52), -28px 24px 27px 0px rgba(0,0,0,0.52), -28px 24px 27px 0px rgba(0,0,0,0.52));
-        }
-    }
-    .mapa2 {
-        transition: all 1.5s;
-
-        &:hover {
-            @include mapas(scale(1.1), 28px 24px 27px 0px rgba(0,0,0,0.52), 28px 24px 27px 0px rgba(0,0,0,0.52), 28px 24px 27px 0px rgba(0,0,0,0.52));
-        }
-    }
     h4 {
         font-size: 3em;
     }
