@@ -1,0 +1,44 @@
+/*Fonts*/
+@font-face {
+    font-family: "headerFont";
+    src: url("../src/Fonts/dejavu-serif-fontfacekit/web-fonts/dejavuserif_regular_macroman/DejaVuSerif-webfont.woff") format("woff");
+    font-display: swap;
+}
+@font-face {
+    font-family: "tituloPagina";
+    src: url(../src/Fonts/England-Hand-DB-fontfacekit/webfonts/englandhanddb_regular_macroman/england-webfont.woff) format("woff");
+    font-display: swap;
+}
+@font-face {
+    font-family: "vintage";
+    src: url(../src/Fonts/im-fell-english-pro-fontfacekit/webFonts/imfellenglishpro_regular_macroman/FeENrm28C-webfont.woff) format("woff");
+    font-display: swap;
+}
+@font-face {
+    font-family: "vintageItalic";
+    src: url(../src/Fonts/im-fell-english-pro-fontfacekit/webFonts/imfellenglishpro_italic_macroman/FeENit27C-webfont.woff) format("woff");
+    font-display: swap;
+}
+@font-face {
+    font-family: "maquina";
+    src: url("../src/Fonts/Kingthings-Trypewriter-fontfacekit/web_fonts/kingthingstrypewriter_regular_macroman/Kingthings_Trypewriter_2-webfont.woff") format("woff");
+    font-display: swap;
+}
+
+@import "variables";
+@import "header";
+@import "footer";
+
+.body {
+    color: rgb(0, 0, 0);
+    background-color: $bg-body;
+}
+
+@import "index";
+@import "contacto";
+@import "productos";
+@import "nosotros";
+@import "ordena";
+@import "login";
+@import "registrarse";
+

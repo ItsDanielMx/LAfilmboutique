@@ -1,0 +1,62 @@
+%display {
+    display: flex;
+    justify-content: end;
+}
+
+#header {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    background-image: $bg-header;
+
+    .navbar-nav .dropdown-menu {
+        position: static;
+        margin-left: -70px;
+    }
+
+    .titulo {
+        font-family: "tituloPagina";
+        font-size: 2em;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+    .menu {
+        @extend %display;
+
+        ul {
+            @extend %display;
+            list-style: none;
+            font-size:0;
+
+            ul {
+                position: absolute;
+                display: none;
+                
+                li {
+                    display: block;
+                }
+    
+            }
+
+            li {
+                font-family: "headerFont";
+                color: rgb(0, 0, 0);
+                position:relative;
+                font-size: 16px;
+                
+                &:hover ul {
+                    display: block;
+                    position: absolute;
+                }
+                
+                a {
+                    font-family: "headerFont"; 
+                    text-decoration: none;
+                }
+            }
+            
+        }
+    }
+}

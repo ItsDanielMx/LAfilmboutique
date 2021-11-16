@@ -1,0 +1,72 @@
+%camaras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%texto {
+    text-align: right;
+    font-size: 2em;
+}
+
+@mixin fuenteTamano($propiedad) {
+    font-size: $propiedad;    
+}
+
+.camaras {
+
+    #camera1 {
+
+        padding:  2em;
+
+        .camarasTop {
+
+            @extend %camaras;
+
+            .comprar {
+                @extend %texto;
+
+                @media only screen and (max-width: 480px) {
+                    @include fuenteTamano(1em);
+                }
+            }
+        }
+    }
+
+    #camera2 {
+
+        padding:  2em;
+
+        .camarasTop {
+
+            @extend %camaras;
+
+            .comprar {
+                @extend %texto;
+
+                @media only screen and (max-width: 480px) {
+                    @include fuenteTamano(1em);
+                }
+            }
+        }
+    }
+
+    #camera3{
+
+        padding:  2em;
+
+        .camarasTop {
+
+            @extend %camaras;
+            
+            .comprar {
+                @extend %texto;
+
+                @media only screen and (max-width: 480px) {
+                    @include fuenteTamano(1em);
+                }
+            }
+        }
+    }
+}
+

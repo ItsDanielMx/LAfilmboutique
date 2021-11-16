@@ -1,0 +1,35 @@
+.nosotrosFondo {
+
+    padding: 3em;
+    background-image: url("../src/Multimedia/Fotos/Camara-fondo.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    section {
+
+        .frase {
+            font-size: 3em;
+            color: whitesmoke;
+        }
+
+        .fraseAutor {
+            font-size: 1em;
+            color: whitesmoke;
+        }
+
+        .nosotrosT {
+            padding: 1em;
+            font-family: "maquina";
+            font-size: 2em;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        .nosotrosP {
+            font-family: "maquina";
+            color: whitesmoke;
+            text-align: justify;
+        }
+    }
+
+}

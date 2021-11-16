@@ -1,0 +1,22 @@
+#footer {
+    background-color: black;
+    padding: 1em;
+    color: white;
+    background-image: $bg-footer;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .credits {
+        text-align: right;
+    }
+
+    .redes {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5em;
+        letter-spacing: 1em;
+    }
+}
