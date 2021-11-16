@@ -144,9 +144,11 @@ main .contacto {
   justify-content: center;
 }
 main .contactoDatos {
+  display: flex;
+  justify-content: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 90px 400px;
+  grid-template-columns: 50%;
+  grid-template-rows: 90px 500px;
   gap: 1em;
 }
 main .contactoDatos .telefonos {
