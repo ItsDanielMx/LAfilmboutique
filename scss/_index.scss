@@ -10,11 +10,18 @@
         font-family: "vintageItalic";
         font-size: 1.5em;
     }
-    
+
     h4 {
         font-size: 3em;
     }
+    
     .sedes {
         font-family: "vintageItalic";
+    }
+}
+@media screen and (max-width:480px) {
+    .videoC {
+        width: 70%;
+        height: auto;
     }
 }
