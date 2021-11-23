@@ -202,10 +202,20 @@ main .contactoDatos .telefonos:hover {
 }
 
 .nosotrosFondo {
+  background-color: black;
   padding: 3em;
   background-image: url("../src/Multimedia/Fotos/Camara-fondo.jpg");
   background-size: cover;
   background-attachment: fixed;
+}
+@media screen and (max-width: 480px) {
+  .nosotrosFondo {
+    background-image: url("../src/Multimedia/Fotos/Camara-fondo.jpg");
+    background-size: 480px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 }
 .nosotrosFondo section .frase {
   font-size: 3em;
