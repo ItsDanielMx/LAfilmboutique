@@ -184,6 +184,10 @@ main .contactoDatos .telefonos:hover {
   font-size: 2em;
 }
 
+.camaras .tituloProductos {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
 .camaras #camera1 {
   padding: 2em;
 }
@@ -191,6 +195,9 @@ main .contactoDatos .telefonos:hover {
   .camaras #camera1 .camarasTop .comprar {
     font-size: 1em;
   }
+}
+.camaras #camera1 .detallesC {
+  text-decoration: underline;
 }
 .camaras #camera2 {
   padding: 2em;
@@ -200,6 +207,9 @@ main .contactoDatos .telefonos:hover {
     font-size: 1em;
   }
 }
+.camaras #camera2 .detallesC {
+  text-decoration: underline;
+}
 .camaras #camera3 {
   padding: 2em;
 }
@@ -207,6 +217,9 @@ main .contactoDatos .telefonos:hover {
   .camaras #camera3 .camarasTop .comprar {
     font-size: 1em;
   }
+}
+.camaras .detallesC {
+  text-decoration: underline;
 }
 
 .nosotrosFondo {
@@ -239,6 +252,7 @@ main .contactoDatos .telefonos:hover {
   font-size: 2em;
   color: whitesmoke;
   text-align: center;
+  text-decoration: underline;
 }
 .nosotrosFondo section .nosotrosP {
   font-family: "maquina";
