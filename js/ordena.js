@@ -7,4 +7,5 @@ let compra3 = parseInt(prompt("Si desea rentar otra camara ponga su precio aqui,
 let dias = parseInt(prompt("Ingrese el numero de dias que desea rentar las camaras"));
 
 let total = compra1 + compra2 + compra3 * dias;
-alert("El total de su compra es de $" + total);
+let ivasuma = total * 16 / 100 + total
+alert("El total de su compra incluyendo IVA es de $" + ivasuma);
