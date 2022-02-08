@@ -279,6 +279,11 @@ main .contactoDatos .telefonos:hover {
   justify-content: center;
 }
 
+#bienvenido {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
 .iniciarS {
   padding: 2em;
 }

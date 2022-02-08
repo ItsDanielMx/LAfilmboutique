@@ -1,4 +1,4 @@
-const lentes = ["lente1", "lente2", "lente3"];
+/*const lentes = ["lente1", "lente2", "lente3"];
 const camaras = ["AlexaLF", "Panasonic", "AlexaMini"];
 const productos = lentes.concat(camaras);
 alert(productos.join(", "));
@@ -23,4 +23,11 @@ const precioIVA = cam.map((el) => {
         precio: el.precio * 16 / 100 + el.precio
     }
 })
-console.log(precioIVA)
+console.log(precioIVA)*/
+
+let click = document.getElementById("cart")
+      click.addEventListener("click", alerta)
+      function alerta() {
+          alert("Se ha agregado este producto al carrito")
+      }
+
