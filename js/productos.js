@@ -24,10 +24,11 @@ const precioIVA = cam.map((el) => {
     }
 })
 console.log(precioIVA)*/
-
+/*
 let click = document.getElementById("cart")
       click.addEventListener("click", alerta)
       function alerta() {
           alert("Se ha agregado este producto al carrito")
       }
+*/
 
