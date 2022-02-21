@@ -1,15 +1,8 @@
-/*const lentes = ["lente1", "lente2", "lente3"];
-const camaras = ["AlexaLF", "Panasonic", "AlexaMini"];
-const productos = lentes.concat(camaras);
-alert(productos.join(", "));
-alert(productos.indexOf("Panasonic"));
+const productos = ["AlexaLF", "Panasonic", "AlexaMini"];
+console.log(...productos);
 
 let buscar = prompt("Ingrese el nombre de lo que busca para saber si hay en almacen");
-if (productos.includes(buscar)) {
-    alert("Tenemos el producto en existencia");
-} else {
-    alert("Lamentablemente no contamos con el producto");
-}
+productos.includes(buscar) ? alert("Tenemos el producto en existencia") : alert("Lamentablemente no contamos con el producto")
 
 const cam = [
     {nombre: "ARRI ALEXA LF", precio: 2500},
@@ -23,12 +16,16 @@ const precioIVA = cam.map((el) => {
         precio: el.precio * 16 / 100 + el.precio
     }
 })
-console.log(precioIVA)*/
-/*
-let click = document.getElementById("cart")
-      click.addEventListener("click", alerta)
-      function alerta() {
-          alert("Se ha agregado este producto al carrito")
-      }
-*/
+console.log(precioIVA)
 
+const camara1 = {
+    nombre: "ARRI ALEXA LF", 
+    precio: 2500,
+    descripcion: "bonita camara",
+    lente: null
+}
+console.log(camara1?.lente  || "la camara no incluye ningun lente");
+
+const [, a, b] = productos
+console.log(a);
+console.log(b);
