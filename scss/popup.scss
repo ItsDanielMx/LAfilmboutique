@@ -72,6 +72,7 @@ body {
 /* ------------------------- */
 
 .overlay {
+
 	background: rgba(0,0,0,.3);
 	position: fixed;
 	top: 0;
@@ -100,6 +101,7 @@ body {
 	transition: .3s ease all;
 	transform: scale(0.7);
 	opacity: 0;
+	
 }
 
 .popup .btn-cerrar-popup {

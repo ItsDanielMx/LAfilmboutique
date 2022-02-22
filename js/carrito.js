@@ -11,6 +11,13 @@ function mostrarProductos(array){
         btnAgregar.addEventListener('click',()=>{
 
             agregarAlCarrito(producto.id)
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'El producto se ha agregado correctamente',
+                showConfirmButton: false,
+                timer: 1500
+              })
         })
     }
 }
@@ -40,11 +47,31 @@ function agregarAlCarrito(id) {
     
         let btnEliminar = document.getElementById(`botonEliminar${productoAgregar.id}`)
         btnEliminar.addEventListener('click',()=>{
-            console.log(productoAgregar.id);
-            btnEliminar.parentElement.remove()                         
-            carrito = carrito.filter(elemento => elemento.id != productoAgregar.id)
-            actualizarCarrito()
-            localStorage.setItem('carrito', JSON.stringify(carrito))
+            if (productoAgregar.cantidad == 1) {
+                btnEliminar.parentElement.remove()                         
+                carrito = carrito.filter(elemento => elemento.id != productoAgregar.id)
+                actualizarCarrito()
+                localStorage.setItem('carrito', JSON.stringify(carrito))
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'El producto se ha eliminado correctamente',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            } else {
+                productoAgregar.cantidad = productoAgregar.cantidad - 1
+                document.getElementById(`cantidad${productoAgregar.id}`).innerHTML = `<p id=cantidad${productoAgregar.id}>Cantidad:${productoAgregar.cantidad}</p>`
+                actualizarCarrito()
+                localStorage.setItem('carrito', JSON.stringify(carrito))
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'El producto se ha eliminado correctamente',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
         })
     }
 
