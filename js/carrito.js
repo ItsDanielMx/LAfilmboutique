@@ -2,7 +2,10 @@ let carrito = []
 
 const contenedorCarrito = document.getElementById("carritoFin");
 
-mostrarProductos(inventario)
+fetch('/js/inventario.json')
+    .then(Response => Response.json())
+    .then(data => mostrarProductos(data))
+    .catch(error => console.log("error"))
 
 function mostrarProductos(array){
     for (const producto of array) {
@@ -94,3 +97,11 @@ function recuperar() {
 }
 
 recuperar()
+
+
+// SDK de Mercado Pago
+const mercadopago = require("mercadopago");
+// Agrega credenciales
+mercadopago.configure({
+  access_token: "TEST-1787002432153083-030203-985a35784d8739a30267d0f86270b30c-307325402",
+});
