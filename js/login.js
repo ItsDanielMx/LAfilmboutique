@@ -20,7 +20,7 @@ let click = document.getElementById("login")
         let datos = document.getElementById("bienvenido")
         datos.innerHTML = 
         `
-            <h2>Bienvenid@ ${usuario} ${contrasenia}</h2>
+            <h2>Bienvenid@ ${usuario}</h2>
         `
 
     }

@@ -98,6 +98,27 @@
   letter-spacing: 1em;
 }
 
+#footerSignUp {
+  background-color: black;
+  padding: 1em;
+  color: white;
+  background-image: linear-gradient(to top, black, #202020);
+  margin-top: 150px;
+}
+#footerSignUp a {
+  color: white;
+  text-decoration: none;
+}
+#footerSignUp .credits {
+  font-size: 0.7em;
+}
+#footerSignUp .redes {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  letter-spacing: 1em;
+}
+
 .body {
   color: black;
   background-color: white;
