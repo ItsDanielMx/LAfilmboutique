@@ -92,6 +92,7 @@
     <section class="camaras container">
         <h1 class="mt-4 tituloProductos">We have everything in lenses and cameras for big projects</h1>
         <hr class="container">
+        <!-- CARRITO POPUP -->
         <div class="contenedor">
             <article>
                 <div class="d-flex justify-content-center">
@@ -106,11 +107,55 @@
                         <hr class="container">
                         <div class="pagar">
                             <p class="precioProducto container">Precio total: $<span id="precioTotal">0</span> </p>
-                            <button class="btn btn-primary">Pay</button>
+                            <div id="terminar" style="display: flex; justify-content: flex-end;"></div>
                         </div>
                     </div>
                 </div>
             </article>
+            <!-- CHECKOUT -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>CheckOut</h4>
+                    <div class="contenedor">
+                        <div class="col1">
+                            <div class="card">
+                                <div id="front" class="front">
+                                    <div class="type">
+                                        <img class="bankid" />
+                                    </div>
+                                    <span class="chip"></span>
+                                    <span class="card_number">&#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF;
+                                        &#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF; </span>
+                                    <div class="date"><span class="date_value">MM / YYYY</span></div>
+                                    <span class="fullname">TITULAR</span>
+                                </div>
+                                <div id="back" class="back">
+                                    <div class="magnetic"></div>
+                                    <div class="bar"></div>
+                                    <span class="seccode">&#x25CF;&#x25CF;&#x25CF;</span>
+                                    <span class="chip"></span><span class="disclaimer">Lorem, ipsum dolor sit amet consectetur
+                                        adipisicing elit. Libero temporibus, totam assumenda, accusamus asperiores eaque fugiat
+                                        illo maiores obcaecati at saepe expedita ab voluptatum quibusdam ipsa beatae veniam
+                                        consectetur atque! </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <label>Número de Tarjeta</label>
+                            <input class="number" type="text" required ng-model="ncard" maxlength="19"
+                                onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                            <label>Nombre del Titular</label>
+                            <input class="inputname" type="text" required placeholder="" />
+                            <label>Fecha de Vencimineto</label>
+                            <input class="expire" type="text" required placeholder="MM / YYYY" />
+                            <label>Número Seguridad</label>
+                            <input class="ccv" type="text" placeholder="CVC" required maxlength="3"
+                                onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                            <button id="fin-compra" class="buy"><i class="material-icons">lock</i>Pagar $<span
+                                    id="pagar">--.--</span></button>
+                        </div>
+                    </div>
+                </div>
             <hr class="container">
         </div>
         <div id="camera1">
@@ -361,7 +406,8 @@
     <script src="/js/popup.js"></script>
     <script src="/js/inventario.js"></script>
     <script src="/js/carrito.js"></script>
-    <script src="/js/productos.js"></script>
+    <!-- <script src="/js/productos.js"></script> -->
+    <script src="/js/checkout.js"></script>
 </body>
 
 </html>

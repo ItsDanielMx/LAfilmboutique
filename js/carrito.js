@@ -1,6 +1,8 @@
 let carrito = []
 
 const contenedorCarrito = document.getElementById("carritoFin");
+const botonTerminar = document.getElementById('terminar');
+const finCompra = document.getElementById('fin-compra');
 
 fetch('/js/inventario.json')
     .then(Response => Response.json())
@@ -95,4 +97,44 @@ function recuperar() {
         });
     }
 }
+botonTerminar.innerHTML= '<a id="finalizar" class="waves-effect waves-light btn modal-trigger" href="#modal1">Checkout</a>'
 recuperar()
+
+$(()=>{
+    $('.modal-trigger').leanModal();
+  });
+
+finCompra.addEventListener('click',()=>{
+
+    if($('.number').val()== '' || $('.inputname').val() == ''||$('.expire').val()== ''||$('.ccv').val()== ''){
+       
+        $('input').css('border', 'solid 1px red')
+
+    }else if(($('.number').val()!= '') && ($('.inputname').val()!= '') && ($('.expire').val() != '') && ($('.ccv').val()!= '')){
+
+        $('input').css('border', 'none')
+
+                fetch('https://jsonplaceholder.typicode.com/posts',{
+                    method: 'POST',
+                    body: JSON.stringify(carrito),
+                    headers:{
+                        'Content-Type': 'application/json'
+                    }
+                }
+                ).then(res => res.json())
+                .catch(error=> console.log(error))
+                .then( response => {
+                     $('#modal1').closeModal();
+                    contenedorCarrito.innerHTML= `<h6>Su pedido ha sido procesado orden N°: 6545s6df4dsfsf4654sdf</h6>`;
+                    carrito= []
+                    localStorage.clear()
+                    actualizarCarrito()
+                    setTimeout(() => {
+                        contenedorCarrito.innerHTML=''
+                        actualizarCarrito()
+                    }, 3000);
+
+                    console.log('Success', response)
+                })
+    }
+})
